@@ -1,0 +1,195 @@
+#VRML_SIM R2021b utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.6680320474749695 -0.7001900968269532 -0.2519266001276208 0.8186070845616883
+  position -0.6824002887926327 0.7310173761497772 0.8916754995831055
+}
+Robot {
+  translation -0.0234912 0.18 -0.0576411
+  children [
+    HingeJoint {
+      jointParameters HingeJointParameters {
+      }
+      device [
+        RotationalMotor {
+        }
+      ]
+      endPoint Solid {
+        translation 0.1 -0.0599997 0.1
+        rotation 1 0 0 1.5708
+        children [
+          DEF kerek1 Shape {
+            appearance PBRAppearance {
+              baseColor 0.2 0.6 1
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.02
+            }
+          }
+        ]
+        boundingObject USE kerek1
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+      }
+      device [
+        RotationalMotor {
+        }
+      ]
+      endPoint Solid {
+        translation 0.1 -0.0599997 -0.1
+        rotation 1 0 0 1.5708
+        children [
+          DEF kerek2 Shape {
+            appearance PBRAppearance {
+              baseColor 0.2 0.6 1
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.02
+            }
+          }
+        ]
+        name "solid(3)"
+        boundingObject USE kerek2
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+      }
+      device [
+        RotationalMotor {
+        }
+      ]
+      endPoint Solid {
+        translation 0.01 -0.0599997 0.1
+        rotation 1 0 0 1.5708
+        children [
+          DEF kerek3 Shape {
+            appearance PBRAppearance {
+              baseColor 0.2 0.6 1
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.02
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE kerek3
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+      }
+      device [
+        RotationalMotor {
+        }
+      ]
+      endPoint Solid {
+        translation 0.01 -0.0599997 -0.1
+        rotation 1 0 0 1.5708
+        children [
+          DEF kerek4 Shape {
+            appearance PBRAppearance {
+              baseColor 0.2 0.6 1
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.02
+            }
+          }
+        ]
+        name "solid(4)"
+        boundingObject USE kerek4
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+      }
+      device [
+        RotationalMotor {
+        }
+      ]
+      endPoint Solid {
+        translation -0.09 -0.0599997 0.1
+        rotation 1 0 0 1.5708
+        children [
+          DEF kerek5 Shape {
+            appearance PBRAppearance {
+              baseColor 0.2 0.6 1
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.02
+            }
+          }
+        ]
+        name "solid(2)"
+        boundingObject USE kerek5
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+      }
+      device [
+        RotationalMotor {
+        }
+      ]
+      endPoint Solid {
+        translation -0.09 -0.0599996 -0.1
+        rotation 1 0 0 1.5708
+        children [
+          DEF kerek6 Shape {
+            appearance PBRAppearance {
+              baseColor 0.2 0.6 1
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.02
+            }
+          }
+        ]
+        name "solid(5)"
+        boundingObject USE kerek6
+        physics Physics {
+        }
+      }
+    }
+    DEF body Transform {
+      children [
+        Shape {
+          appearance PBRAppearance {
+          }
+          geometry Box {
+            size 0.27 0.126 0.18
+          }
+        }
+      ]
+    }
+  ]
+  boundingObject USE body
+  physics Physics {
+    mass 0.7
+  }
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
