@@ -3,22 +3,24 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.6680320474749695 -0.7001900968269532 -0.2519266001276208 0.8186070845616883
-  position -0.6824002887926327 0.7310173761497772 0.8916754995831055
+  orientation -0.5100904256234025 -0.8045137578146239 -0.30424557708260724 1.1466814954508218
+  position -0.845746268853665 0.8022184376601202 0.5960763379001701
 }
 Robot {
-  translation -0.0234912 0.18 -0.0576411
+  translation -0.023499530284320343 0.07988585983173686 -0.05764111610884146
+  rotation -0.0019411731859166855 -1.8110233425813173e-07 0.99999811592154 0.00010374833151041058
   children [
     HingeJoint {
       jointParameters HingeJointParameters {
+        position -1.6574527261781213e-07
       }
       device [
         RotationalMotor {
         }
       ]
       endPoint Solid {
-        translation 0.1 -0.0599997 0.1
-        rotation 1 0 0 1.5708
+        translation 0.1 -0.05999968342547191 0.10000000994466526
+        rotation 1 0 0 1.5707998342547276
         children [
           DEF kerek1 Shape {
             appearance PBRAppearance {
@@ -33,18 +35,21 @@ Robot {
         boundingObject USE kerek1
         physics Physics {
         }
+        linearVelocity -6.971595319988877e-10 -2.1916509218148316e-08 -2.1666114606252883e-09
+        angularVelocity 6.72439365243942e-07 -3.637552705692756e-09 2.980233559398585e-08
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
+        position 1.6581889108346788e-07
       }
       device [
         RotationalMotor {
         }
       ]
       endPoint Solid {
-        translation 0.1 -0.0599997 -0.1
-        rotation 1 0 0 1.5708
+        translation 0.1 -0.059999683418110066 -0.10000000994908236
+        rotation 1 0 0 1.570800165818891
         children [
           DEF kerek2 Shape {
             appearance PBRAppearance {
@@ -60,18 +65,21 @@ Robot {
         boundingObject USE kerek2
         physics Physics {
         }
+        linearVelocity -7.002024910557563e-10 -2.1946697459016932e-08 2.1649575913987704e-09
+        angularVelocity -6.727492851239504e-07 3.7362308930872685e-09 2.980249172893604e-08
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
+        position -1.1403111699337387e-07
       }
       device [
         RotationalMotor {
         }
       ]
       endPoint Solid {
-        translation 0.01 -0.0599997 0.1
-        rotation 1 0 0 1.5708
+        translation 0.009999999999999998 -0.0599996885968879 0.10000000684183215
+        rotation 0.9999999999999999 0 0 1.570799885968883
         children [
           DEF kerek3 Shape {
             appearance PBRAppearance {
@@ -87,18 +95,21 @@ Robot {
         boundingObject USE kerek3
         physics Physics {
         }
+        linearVelocity -5.886356621106529e-10 4.137144023579623e-08 -2.431395393086836e-13
+        angularVelocity 7.603596051430417e-11 4.697590590458254e-11 2.9729393544703844e-08
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
+        position 1.1407194003491942e-07
       }
       device [
         RotationalMotor {
         }
       ]
       endPoint Solid {
-        translation 0.01 -0.0599997 -0.1
-        rotation 1 0 0 1.5708
+        translation 0.009999999999999998 -0.0599996885928056 -0.10000000684428152
+        rotation 1 0 0 1.5708001140719399
         children [
           DEF kerek4 Shape {
             appearance PBRAppearance {
@@ -114,18 +125,21 @@ Robot {
         boundingObject USE kerek4
         physics Physics {
         }
+        linearVelocity -5.916512062337413e-10 4.136950202599302e-08 5.907440270280674e-13
+        angularVelocity -9.600921415026086e-11 5.112908754719194e-11 2.9729926996244066e-08
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
+        position -1.8343267882414693e-07
       }
       device [
         RotationalMotor {
         }
       ]
       endPoint Solid {
-        translation -0.09 -0.0599997 0.1
-        rotation 1 0 0 1.5708
+        translation -0.09 -0.059999681656731106 0.10000001100590401
+        rotation 0.9999999999999999 0 0 1.5707998165673211
         children [
           DEF kerek5 Shape {
             appearance PBRAppearance {
@@ -141,18 +155,21 @@ Robot {
         boundingObject USE kerek5
         physics Physics {
         }
+        linearVelocity -4.938917511753932e-10 -1.9705189762603556e-08 -3.2039644134759206e-09
+        angularVelocity 5.933640055643643e-07 2.98057934509397e-09 2.9686071889693158e-08
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
+        position 1.8332240309627767e-07
       }
       device [
         RotationalMotor {
         }
       ]
       endPoint Solid {
-        translation -0.09 -0.0599996 -0.1
-        rotation 1 0 0 1.5708
+        translation -0.08999999999999998 -0.05999958166775868 -0.10000001099926917
+        rotation 0.9999999999999999 0 0 1.5708001833224028
         children [
           DEF kerek6 Shape {
             appearance PBRAppearance {
@@ -168,12 +185,15 @@ Robot {
         boundingObject USE kerek6
         physics Physics {
         }
+        linearVelocity -4.969452449223677e-10 -1.967319256729858e-08 3.205182674425969e-09
+        angularVelocity -5.930384366338043e-07 -2.8814318550509172e-09 2.968713809699243e-08
       }
     }
     DEF body Transform {
       children [
         Shape {
           appearance PBRAppearance {
+            baseColor 1 0 0.1
           }
           geometry Box {
             size 0.27 0.126 0.18
@@ -186,6 +206,8 @@ Robot {
   physics Physics {
     mass 0.7
   }
+  linearVelocity -2.3535717977354156e-09 4.1908869669831414e-08 2.8621781532147037e-13
+  angularVelocity -9.388243572076528e-12 4.940313729100957e-11 2.9739582451952425e-08
 }
 TexturedBackground {
 }
