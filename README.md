@@ -1,5 +1,4 @@
-# Mindstorm-air-student
-Mindstorm csapat - Autonóm és Intelligens Robotok 2021 ősz kurzus
+<p># Mindstorm-air-student Mindstorm csapat - Auton&oacute;m &eacute;s Intelligens Robotok 2021 ősz kurzus</p>
 
 <h2>Csapat tagok:</h2>
 
@@ -32,7 +31,7 @@ Az adagol&oacute; kart fel&uuml;lről r&ouml;gz&iacute;tett&uuml;k, hogy ne tudj
 A kil&ouml;vő szerkezet &aacute;tt&eacute;t&eacute;nek &uacute;jra &eacute;p&iacute;t&eacute;se &eacute;s jav&iacute;t&aacute;sa is megt&ouml;rt&eacute;nt. &Iacute;gy biztosabban &eacute;s nagyobb sebess&eacute;ggel tudja a l&ouml;ved&eacute;keket kilőni, aminek egy f&uuml;ggőleges t&aacute;rja a robot elej&eacute;n helyezkedik el.&nbsp;<br />
 A sz&aacute;m&iacute;t&oacute;g&eacute;p k&ouml;z&eacute;pen kapott helyett annak &eacute;rdek&eacute;ben, hogy jobb legyen a s&uacute;ly eloszl&aacute;s.<br />
 Felker&uuml;lt egy t&aacute;vols&aacute;gm&eacute;rő szenzor, ami azt n&eacute;zi, hogy mi van a robot el&ouml;tt. Felker&uuml;lt tov&aacute;bb&aacute; egy gyroscope &eacute;s RGB szenzor is. Az RGB szenzort nem tudtuk rendesen be&uuml;zemelni, mert a talajon l&eacute;vő szigetelőszalag sz&iacute;n&eacute;t nem tudta rendesen meghat&aacute;rozni. Ez tov&aacute;bbi fejleszt&eacute;st ig&eacute;nyel.<br />
-A programon bel&uuml;l felmer&uuml;lt egy k&eacute;rd&eacute;s a broadcast message r&eacute;szn&eacute;l. Itt arra j&ouml;ttem r&aacute;, hogy ezt az elemet haszn&aacute;lva tudunk egy &bdquo;&uuml;zenetet&rdquo; k&uuml;ldeni, amit fogadni tud ez az elem:&nbsp;</p>
+A programon bel&uuml;l felmer&uuml;lt egy k&eacute;rd&eacute;s a broadcast message r&eacute;szn&eacute;l. Itt arra j&ouml;ttem r&aacute;, hogy a &quot;boradcast(message1)&quot; elemet haszn&aacute;lva tudunk egy &bdquo;&uuml;zenetet&rdquo; k&uuml;ldeni, amit fogadni tud a &quot;when i receive(message1)&quot; elem.</p>
 
 <p>A program az RGB szenzor sikertelen haszn&aacute;lata miatt csak az al&aacute;bbit tudja:<br />
 Elindul előre addig am&iacute;g a robot el&eacute; nem ker&uuml;l vmi 25cm-en bel&uuml;l. Meg&aacute;ll &eacute;s tolat egy sec-ig. V&aacute;r sec-et majd vissza sz&aacute;mol &eacute;s lő egyet. Ezut&aacute;n elfordul jobbra 90&deg;-ot &eacute;s indul megint előre. Ha kifogy a t&ouml;lt&eacute;nyből, azaz ellőtte mag&aacute;t 10-szer akkor kikapcsol.<br />
