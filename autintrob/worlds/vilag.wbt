@@ -3,17 +3,20 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.6680320474749695 -0.7001900968269532 -0.2519266001276208 0.8186070845616883
-  position -0.6824002887926327 0.7310173761497772 0.8916754995831055
+  orientation -0.5444508525106535 -0.8139643862966373 -0.20257158497963504 0.7905098728077852
+  position -0.8840076108720906 0.7985659561919579 1.2693183268964072
 }
 Robot {
-  translation -0.0234912 0.18 -0.0576411
+  translation -0.0234912 0.08 -0.03764
   children [
-    HingeJoint {
+    DEF wheel_r1 HingeJoint {
       jointParameters HingeJointParameters {
+        axis 0 0 1
+        anchor 0.1 -0.0599997 0.1
       }
       device [
         RotationalMotor {
+          name "wheel_r1"
         }
       ]
       endPoint Solid {
@@ -35,11 +38,14 @@ Robot {
         }
       }
     }
-    HingeJoint {
+    DEF wheel_l1 HingeJoint {
       jointParameters HingeJointParameters {
+        axis 0 0 1
+        anchor 0.1 -0.0599997 -0.1
       }
       device [
         RotationalMotor {
+          name "wheel_l1"
         }
       ]
       endPoint Solid {
@@ -62,11 +68,14 @@ Robot {
         }
       }
     }
-    HingeJoint {
+    DEF wheel_r2 HingeJoint {
       jointParameters HingeJointParameters {
+        axis 0 0 1
+        anchor 0.01 -0.0599997 0.1
       }
       device [
         RotationalMotor {
+          name "wheel_r2"
         }
       ]
       endPoint Solid {
@@ -89,11 +98,14 @@ Robot {
         }
       }
     }
-    HingeJoint {
+    DEF wheel_l2 HingeJoint {
       jointParameters HingeJointParameters {
+        axis 0 0 1
+        anchor 0.01 -0.0599997 -0.1
       }
       device [
         RotationalMotor {
+          name "wheel_l2"
         }
       ]
       endPoint Solid {
@@ -116,11 +128,14 @@ Robot {
         }
       }
     }
-    HingeJoint {
+    DEF wheel_r3 HingeJoint {
       jointParameters HingeJointParameters {
+        axis 0 0 1
+        anchor -0.09 -0.0599997 0.1
       }
       device [
         RotationalMotor {
+          name "wheel_r3"
         }
       ]
       endPoint Solid {
@@ -143,11 +158,14 @@ Robot {
         }
       }
     }
-    HingeJoint {
+    DEF wheel_l3 HingeJoint {
       jointParameters HingeJointParameters {
+        axis 0 0 1
+        anchor -0.09 -0.0599996 -0.1
       }
       device [
         RotationalMotor {
+          name "wheel_l3"
         }
       ]
       endPoint Solid {
@@ -186,10 +204,13 @@ Robot {
   physics Physics {
     mass 0.7
   }
+  controller "robcontroller"
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
+  floorSize 4 4
+  wallHeight 0.3
 }

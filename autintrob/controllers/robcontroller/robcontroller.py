@@ -4,20 +4,50 @@
 #  from controller import Robot, Motor, DistanceSensor
 from controller import Robot
 
-# create the Robot instance.
 robot = Robot()
 
-# get the time step of the current world.
 timestep = int(robot.getBasicTimeStep())
 
-# You should insert a getDevice-like function in order to get the
-# instance of a device of the robot. Something like:
-#  motor = robot.getDevice('motorname')
-#  ds = robot.getDevice('dsname')
-#  ds.enable(timestep)
+# Variables
+
+
+# Setup wheels
+wheel_r1 = robot.getDevice('wheel_r1')
+wheel_r2 = robot.getDevice('wheel_r2')
+wheel_r3 = robot.getDevice('wheel_r3')
+wheel_l1 = robot.getDevice('wheel_l1')
+wheel_l2 = robot.getDevice('wheel_l2')
+wheel_l3 = robot.getDevice('wheel_l3')
+    
+right_wheels = [wheel_r1, wheel_r2, wheel_r3]
+left_wheels = [wheel_l1, wheel_l2, wheel_l3]
+    
+for wheel in right_wheels:
+    wheel.setPosition(float('inf'))
+    wheel.setVelocity(0.0)
+for wheel in left_wheels:
+    wheel.setPosition(float('inf'))
+    wheel.setVelocity(0.0)
+
+
+# Functions
+
+def SetRightMotor(velocity: float):
+    for wheel in right_wheels:
+        wheel.setVelocity(velocity)
+
+def SetLeftMotor(velocity: float):
+    for wheel in left_wheels:
+        wheel.setVelocity(velocity)
+
+def SetMotors(v_right: float, v_left: float):
+    SetRightMotor(v_right)
+    SetLeftMotor(v_left)
+
+# Startup
+
 
 # Main loop:
-# - perform simulation steps until Webots is stopping the controller
 while robot.step(timestep) != -1:
     # Read the sensors:
     # Enter here functions to read sensor data, like:
@@ -27,6 +57,9 @@ while robot.step(timestep) != -1:
 
     # Enter here functions to send actuator commands, like:
     #  motor.setPosition(10.0)
+    
+    
+    
     pass
 
 # Enter here exit cleanup code.
