@@ -4,7 +4,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation -0.5444508525106535 -0.8139643862966373 -0.20257158497963504 0.7905098728077852
-  position -0.8840076108720906 0.7985659561919579 1.2693183268964072
+  position -1.7469740992520315 1.4876840557502475 2.400854291375765
 }
 Robot {
   translation -0.0234912 0.08 -0.03764
@@ -189,9 +189,13 @@ Robot {
       }
     }
     DEF body Transform {
+      scale 1 0.8 1
       children [
         Shape {
           appearance PBRAppearance {
+            baseColor 0.2 1 0.2
+            metalness 0.8
+            occlusionMapStrength 0
           }
           geometry Box {
             size 0.27 0.126 0.18

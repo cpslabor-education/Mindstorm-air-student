@@ -2,13 +2,21 @@
 
 # You may need to import some classes of the controller module. Ex:
 #  from controller import Robot, Motor, DistanceSensor
+import math
+
 from controller import Robot
+from controller import Keyboard
 
 robot = Robot()
+keyboard1 = Keyboard()
+keyboard2 = Keyboard()
 
 timestep = int(robot.getBasicTimeStep())
 
 # Variables
+max_velocity = robot.getDevice('wheel_r1').getMaxVelocity()
+forward_speed = 1 * max_velocity
+turn_speed = 0.7 * max_velocity
 
 
 # Setup wheels
@@ -44,21 +52,40 @@ def SetMotors(v_right: float, v_left: float):
     SetRightMotor(v_right)
     SetLeftMotor(v_left)
 
-# Startup
+def GetVelocity_Keyboard():
+    velocities = [0,0]
+    key1 = keyboard1.getKey()
+    key2 = keyboard2.getKey()
+    # Get forward input
+    if (key1 == ord('W') or key2 == ord('W')):
+        velocities = [forward_speed, forward_speed]
+    elif (key1 == ord('S') or key2 == ord('S')):
+        velocities = [-forward_speed, -forward_speed]
+    # Get side input
+    if (key1 == ord('D') or key2 == ord('D')):
+        if velocities == [0,0]:
+            velocities = [turn_speed, -turn_speed]
+        else:
+            velocities[1] = (velocities[1]/forward_speed) * (max_velocity-turn_speed)
+    elif (key1 == ord('A') or key2 == ord('A')):
+        if velocities == [0,0]:
+            velocities = [-turn_speed, turn_speed]
+        else:
+            velocities[0] = (velocities[0]/forward_speed) * (max_velocity-turn_speed)
+    
+    return velocities
+    
+    
 
+# Startup
+keyboard1.enable(timestep)
+keyboard2.enable(timestep)
 
 # Main loop:
 while robot.step(timestep) != -1:
-    # Read the sensors:
-    # Enter here functions to read sensor data, like:
-    #  val = ds.getValue()
-
-    # Process sensor data here.
-
-    # Enter here functions to send actuator commands, like:
-    #  motor.setPosition(10.0)
     
-    
+    velocities = GetVelocity_Keyboard()
+    SetMotors(velocities[0], velocities[1])
     
     pass
 
