@@ -59,3 +59,11 @@ A program az RGB szenzor sikertelen használta miatt csak az alábbit tudja:
 Elindul előre addig amíg a robot elé nem kerül vmi 25cm-en belül. Megáll és tolat egy sec-ig. Vár sec-et majd vissza számol és lő egyet. Ezután elfordul jobbra 90°-ot és indul megint előre. Ha kifogy a töltényből, azaz ellőtte magát 10-szer akkor kikapcsol.
 <br />
 &nbsp;</p>
+
+<br>
+
+<h2>Jegyzőkönyv</h2>
+
+<p>
+	A robottunk le lett modellezve WeBots-ban némi egyszeresűtést alkalmazva. Egy lánctalp modellezeésének komplexitása miatt úgy döntöttünk, hogy egyenértékűnek vesszük az oldalankénti három kereket egy lánctalppal. 
+	</p>
